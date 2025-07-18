@@ -72,6 +72,48 @@
     a.link {
       color: #8ab4f8;
     }
+    
+    .side-menu {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  padding: 1rem 1.5rem;
+  background-color: #111;
+  border-right: 1px solid #333;
+  height: 100%;
+  width: 200px;
+  overflow-y: auto;
+}
+
+.side-menu h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.side-menu li {
+  margin-bottom: 0.6rem;
+}
+
+.side-menu a {
+  color: #8ab4f8;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.side-menu a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  margin-left: 220px; /* pour laisser la place au menu latéral */
+}
+
   </style>
 </head>
 <body>
@@ -84,17 +126,16 @@
     </nav>
   </header>
 
-  <div class="container">
+  <div class="container" id="bio">
     <section id="bio">
       <h2>Bio</h2>
       <p>
         Le progphète poursuis sa recherche musicale depuis 2015. Blues, jazz, metal, rock, musique électronique, musique savante ou extraits de film, tout est bon dans le son. Ce site regroupe l'ensemble des albums publiés et en cours de diffusion.
       </p>
     </section>
-
-    <section id="discographie">
-      <h2>Discographie</h2>
-      <ul>
+<aside class="side-menu">
+  <h3>Discographie</h3>
+  <ul>
     <li><a class="link" href="#lourd">Lourd (2024)</a></li>
     <li><a class="link" href="#abstraction">Abstraction (2023)</a></li>
     <li><a class="link" href="#jupiter">♃ (2022)</a></li>
@@ -102,6 +143,8 @@
     <li><a class="link" href="#sketches">Musique à sketches (2020)</a></li>
     <li><a class="link" href="#outer">Outer silence (2019)</a></li>
   </ul>
+</aside>
+
 
        <div class="album" id="lourd">
     <hr />
