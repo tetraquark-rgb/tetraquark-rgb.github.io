@@ -19,6 +19,22 @@
     border-bottom: 1px solid #333;
   }
 
+  <!-- Menu mobile (hamburger) -->
+<div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</div>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <div class="close-btn" onclick="toggleMobileMenu()">✖</div>
+  <ul>
+    <li><a href="#lourd">Lourd (2024)</a></li>
+    <li><a href="#abstraction">Abstraction (2023)</a></li>
+    <li><a href="#jupiter">♃ (2022)</a></li>
+    <li><a href="#recollages">(Re)collages (2021)</a></li>
+    <li><a href="#sketches">Musique à sketches (2020)</a></li>
+    <li><a href="#outer">Outer silence (2019)</a></li>
+  </ul>
+</nav>
+
+  
   nav a {
     margin: 0 1rem;
     color: #e0e0e0;
@@ -127,6 +143,68 @@
     margin-left: 0;
     width: 100%;
     padding: 1.5rem;
+  }
+}
+
+  /* Bouton hamburger */
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* Menu mobile */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #111;
+  z-index: 999;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.mobile-menu li {
+  margin-bottom: 1rem;
+}
+
+.mobile-menu a {
+  color: #8ab4f8;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* Bouton de fermeture */
+.close-btn {
+  font-size: 1.5rem;
+  text-align: right;
+  cursor: pointer;
+  color: #e0e0e0;
+}
+
+/* Responsive : affiche le menu hamburger uniquement sur mobile */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .side-menu {
+    display: none;
   }
 }
 
@@ -362,5 +440,16 @@
   <footer>
     &copy; 2025 – Tous droits réservés.
   </footer>
+  <script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'block';
+    }
+  }
+</script>
+
 </body>
 </html>
